@@ -1,5 +1,7 @@
+import java.util.Scanner;
 public class TickTacToeGame{
-    char array[]=new char[10];
+    char board[]=new char[10];
+    Scanner sc=new Scanner(System.in);
     char word = ' ';
 	char requiredX = 'X';
 	char requiredO = 'O';
@@ -9,7 +11,7 @@ public class TickTacToeGame{
      public void createBoard(){
        System.out.println("Welcome to Tictactoe game");
 	for(int i=1;i<=9;i++){
-	    array[i]=' ';
+	    board[i]=' ';
 	}
 
      }
@@ -27,10 +29,19 @@ public class TickTacToeGame{
 	
 	  }
        }
+       public void showBoard() {
+    	System.out.println("|__|__|__|");
+	System.out.println("| "+board[0]+"| "+board[1]+"| "+board[3]+"|");
+	System.out.println("|__|__|__|");
+	System.out.println("| "+board[4]+"| "+board[5]+"| "+board[6]+"|");
+	System.out.println("|__|__|__|");
+	System.out.println("| "+board[7]+"| "+board[8]+"| "+board[9]+"|");
+	}
     public static void main (String args[]){
         TickTacToeGame t1=new TickTacToeGame();
         t1.createBoard();
 	t1.userInputX();
+	t1.showBoard();
     }
 }
 	
